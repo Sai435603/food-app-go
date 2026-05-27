@@ -1,13 +1,8 @@
 package models
 
-import (
-	"github.com/google/uuid"
-	"gorm.io/gorm"
-)
-
 // Orders table
 type Order struct {
-	Id                string          `gorm:"primaryKey;column:id" json:"id"`
+	BaseModel
 	UserId            string          `json:"user_id"`
 	User              User            `gorm:"foreignKey:UserID"`
 	RestaurantId      string          `json:"restaurant_id"`
@@ -18,9 +13,4 @@ type Order struct {
 	Address           Address         `gorm:"foreignKey:AddressID" json:"address,omitempty"`
 	OrderStatus       string          `json:"order_status"`
 	OrderItems        []OrderItem     `gorm:"foreignKey:OrderID"`
-}
-
-func (order *Order) BeforeCreate(scope *gorm.DB) error {
-	order.Id = uuid.New().String()
-	return nil
 }
