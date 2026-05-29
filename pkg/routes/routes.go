@@ -1,6 +1,10 @@
 package routes
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"log"
+
+	"github.com/gofiber/fiber/v2"
+)
 
 func RegisterRoutes(app *fiber.App) {
 	api := app.Group("/api/")
@@ -13,4 +17,6 @@ func RegisterRoutes(app *fiber.App) {
 	SetUpOrderRoutes(orders)
 	payments := api.Group("/payments")
 	SetUpPaymentRoutes(payments)
+
+	log.Println("All routes successfully registered!")
 }
