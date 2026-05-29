@@ -1,0 +1,19 @@
+User opens app
+    ↓
+Gets restaurants
+    ↓
+Views menu
+    ↓
+Adds items to cart
+    ↓
+Places order
+    ↓
+Makes payment
+    ↓
+Restaurant accepts
+    ↓
+Delivery partner assigned
+    ↓
+Track order
+    ↓
+Order delivered

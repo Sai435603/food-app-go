@@ -1,0 +1,3 @@
+GET /api/:user/restaurants  //To show all the restaurants with food idtems that they have
+POST /api/:user/order  //This hels to place an order
+
